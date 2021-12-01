@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 767px){
+  div#menu, div.screen{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px){
+  /*全画面メニュー*/
+  div.screen{
+    display:none;
+  	position: fixed;
+  	top:0;
+    left:0;
+  	z-index: 8;
+  	width:100%;
+    height: 300px;
+    background-color: rgba(21,21,21,0.95);
+  }
+
+
+
+  /*三本線メニュー*/
+  div#menu{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+  }
+
+  a.btn{
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+
+  span.line_icon{
+    position: absolute;
+    top:45px;
+    left:5px;
+    display: block;
+    width:30px;
+    height:2px;
+    background-color: #fff;
+    transition:0.5s;
+  }
+
+  span.line_icon:before,span.line_icon:after{
+    display: block;
+    content:"";
+    width:30px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+
+  span.line_icon:before{
+    margin-top: -7px;
+  }
+
+  span.line_icon:after{
+    margin-top: 13px;
+  }
+
+
+  /*メニュークリック時に
+    .line_iconと.closebtnを切り替える
+    三→×へ
+  */
+
+  span.closebtn{
+   width: 0;
+   background-color: #fff;
+  }
+
+  span.closebtn:before,span.closebtn:after{
+    margin-top: 0;
+    background-color: #fff;
+  }
+
+  span.closebtn:before{
+    height: 1px;
+    transform: rotate(45deg);
+  }
+
+  span.closebtn:after{
+    height: 1px;
+    transform: rotate(-45deg);
+  }
+
+
+
+
+  /*リンクテキスト*/
+  ul#screen_menu{
+  	position: absolute;
+  	top:100px;
+  	left:0;
+  	right:0;
+  	bottom:0;
+  	margin: auto;
+  	list-style-type:none;
+  	text-align: center;
+  }
+
+  ul#screen_menu li{
+  	margin: 0 0 30px 0;
+  }
+
+  ul#screen_menu li a{
+  	text-decoration:none;
+  	padding:17px 25px;
+  	color:#FFF;
+  	font-size: 16px;
+    font-family: 'Noto Serif JP', serif;
+  	transition: 0.3s;
+  }
+
+  ul#screen_menu li a:hover{
+  	opacity: 0.5;
+
+  }
+
+}
