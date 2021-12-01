@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Weather</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header_top">
+        <a href="index.html"><h1>World Weather</h1></a>
+        <div class="input">
+          <input type="text" placeholder="Input the Country or City" class="input_text">
+          <input type="submit" value="Submit" class="submit">
+        </div>
+      </header>
+      <h2 class="name" id="name"></h2>
+      <div class="icon">
+      </div>
+      <table>
+        <tr>
+          <th>天気</th><td class="desc" id="desc"></td>
+        </tr>
+        <tr>
+          <th>現在の気温</th><td class="temp"></td>
+        </tr>
+        <tr>
+          <th>最高気温</th><td class="temp_max"></td>
+        </tr>
+        <tr>
+          <th>最低気温</th><td class="temp_min"></td>
+        </tr>
+        <tr>
+          <th>湿度</th><td class="humidity"></td>
+        </tr>
+      </table>
+      <p><span>※ローマ字で入力することを推奨します。</span></p>
+    </div>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
